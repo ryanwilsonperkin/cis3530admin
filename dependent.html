@@ -51,7 +51,9 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
     <script>
-      $(document).ready(get_dependents);
+      $(document).ready(function() {
+        populate_table('/api/get_dependents','#dependentTable');
+      });
     </script>
   </body>
 </html>

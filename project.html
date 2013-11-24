@@ -52,7 +52,9 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
     <script>
-      $(document).ready(get_projects);
+      $(document).ready(function() {
+        populate_table('/api/get_projects','#projectTable');
+      });
     </script>
   </body>
 </html>

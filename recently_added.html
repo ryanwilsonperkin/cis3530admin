@@ -81,9 +81,11 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
     <script>
-      $(document).ready(get_new_employees);
-      $(document).ready(get_new_dependents);
-      $(document).ready(get_new_works_on);
+      $(document).ready(function() {
+        populate_table('/api/get_new_employees','#employeeTable');
+        populate_table('/api/get_new_dependents','#dependentTable');
+        populate_table('/api/get_new_works_on','#worksOnTable');
+      });
     </script>
   </body>
 </html>
