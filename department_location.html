@@ -31,9 +31,23 @@
     </nav>
 
     <div class="container">
+      <table class="table table-striped" id="departmentLocationTable">
+        <thead>
+          <tr>
+            <th>Department Number</th>
+            <th>Department Location</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
     </div>
 
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+      $(document).ready(get_department_locations);
+    </script>
   </body>
 </html>

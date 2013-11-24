@@ -31,9 +31,27 @@
     </nav>
 
     <div class="container">
+      <table class="table table-striped" id="projectTable">
+        <thead>
+          <tr>
+            <th>Project Name</th>
+            <th>Project Number</th>
+            <th>Project Location</th>
+            <th>Department Number</th>
+            <th>Amount Spent</th>
+            <th>Amount Made</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
     </div>
 
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+      $(document).ready(get_projects);
+    </script>
   </body>
 </html>

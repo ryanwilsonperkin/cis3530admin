@@ -31,9 +31,26 @@
     </nav>
 
     <div class="container">
+      <table class="table table-striped" id="dependentTable">
+        <thead>
+          <tr>
+            <th>Employee SSN</th>
+            <th>Dependent Name</th>
+            <th>Sex</th>
+            <th>Birth Date</th>
+            <th>Relationship</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
     </div>
 
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+      $(document).ready(get_dependents);
+    </script>
   </body>
 </html>
