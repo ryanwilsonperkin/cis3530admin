@@ -28,7 +28,8 @@ CREATE TABLE `Department` (
   `Mgr_ssn` char(9) NOT NULL,
   `userid` varchar(8) NOT NULL,
   PRIMARY KEY (`Dnumber`),
-  UNIQUE KEY `Dname` (`Dname`)
+  UNIQUE KEY `Dname` (`Dname`),
+  CONSTRAINT fk_Department_Mssn FOREIGN KEY(Mgr_ssn) REFERENCES Employee(SSN)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -56,7 +57,9 @@ CREATE TABLE `Dependent` (
   `Bdate` date NOT NULL,
   `Relationship` varchar(15) NOT NULL,
   `userid` varchar(8) NOT NULL,
-  PRIMARY KEY (`Essn`,`Dependent_name`)
+  PRIMARY KEY (`Essn`,`Dependent_name`,`Relationship`),
+  UNIQUE(Essn, Dependent_name, Relationship),
+  CONSTRAINT fk_Dependent_Essn FOREIGN KEY(Essn) REFERENCES Employee(SSN)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -80,7 +83,9 @@ DROP TABLE IF EXISTS `DeptLocation`;
 CREATE TABLE `DeptLocation` (
   `Dnumber` int(11) NOT NULL,
   `Dlocation` varchar(15) NOT NULL,
-  PRIMARY KEY (`Dnumber`,`Dlocation`)
+  PRIMARY KEY (`Dnumber`,`Dlocation`),
+  UNIQUE(Dnumber, Dlocation),
+  CONSTRAINT fk_DeptLocation_Dnum FOREIGN KEY(Dnumber) REFERENCES Department(Dnumber)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -115,7 +120,8 @@ CREATE TABLE `Employee` (
   `EmpDate` year(4) DEFAULT NULL,
   `userid` varchar(8) NOT NULL,
   PRIMARY KEY (`SSN`),
-  UNIQUE KEY `Fname` (`Fname`,`Lname`)
+  UNIQUE (SSN),
+  CONSTRAINT fk_Employee_Dnum FOREIGN KEY(Dno) REFERENCES Department(Dnumber)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -145,7 +151,8 @@ CREATE TABLE `Project` (
   `AmtSpent` int(11) NOT NULL,
   `AmtMade` int(11) NOT NULL,
   PRIMARY KEY (`Pnumber`),
-  UNIQUE KEY `Pname` (`Pname`)
+  UNIQUE KEY `Pname` (`Pname`),
+  CONSTRAINT fk_Project_Dnum FOREIGN KEY(Dnum) REFERENCES Department(Dnumber)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -171,7 +178,10 @@ CREATE TABLE `WorksOn` (
   `Pno` int(11) NOT NULL,
   `Hours` decimal(4,1) NOT NULL,
   `userid` varchar(8) NOT NULL,
-  PRIMARY KEY (`Essn`,`Pno`)
+  PRIMARY KEY (`Essn`,`Pno`),
+  UNIQUE(Essn, Pno),
+  CONSTRAINT fk_WorksOn_Essn FOREIGN KEY(Essn) REFERENCES Employee(SSN),
+  CONSTRAINT fk_WorksOn_Pnum FOREIGN KEY(Pno) REFERENCES Project(Pnumber)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
