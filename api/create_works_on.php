@@ -4,9 +4,9 @@ header('Content-type: application/json');
 mysql_connect() or die('Could not connect: ' . mysql_error());
 mysql_select_db('Company');
 
-$essn = $_POST["essn"];
-$pno = $_POST["pno"];
-$hours = $_POST["hours"];
+$essn = $_POST["Essn"];
+$pno = $_POST["Pno"];
+$hours = $_POST["Hours"];
 $userid = $INTERFACE_USER_ID;
 
 $value = sprintf(

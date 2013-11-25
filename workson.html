@@ -32,6 +32,27 @@
     </nav>
 
     <div class="container">
+      <h1>Create Works On</h1>
+      <form id="createWorksOnForm" name="createWorksOnForm" method="post" role="form">
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="alert alert-danger hidden" id="formErrors"></div>
+            <div class="form-group">
+              <label for="Essn">Employee SSN</label>
+              <input type="text" class="form-control" id="Essn" name="Essn" placeholder="XXXXXXXXX">
+            </div>
+            <div class="form-group">
+              <label for="Pno">Project Number</label>
+              <input type="number" class="form-control" id="Pno" name="Pno" placeholder="1">
+            </div>
+            <div class="form-group">
+              <label for="Hours">Hours</label>
+              <input type="number" class="form-control" id="Hours" name="Hours" placeholder="1.0">
+            </div>
+            <button type="submit" class="btn btn-success" id="submit">Submit</button>
+          </div>
+        </div>
+      </form>
       <h1>View Works On</h1>
       <table class="table table-striped" id="worksOnTable">
         <thead>
@@ -52,6 +73,7 @@
     <script>
       $(document).ready(function() {
         populate_table('/api/get_works_on','#worksOnTable');
+        bind_retrieval('/api/create_works_on','#createWorksOnForm');
       });
     </script>
   </body>

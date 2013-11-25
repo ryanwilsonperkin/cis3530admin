@@ -4,11 +4,11 @@ header('Content-type: application/json');
 mysql_connect() or die('Could not connect: ' . mysql_error());
 mysql_select_db('Company');
 
-$essn = $_POST["essn"];
-$dependent_name = $_POST["dependent_name"];
-$sex = $_POST["sex"];
-$bdate = $_POST["bdate"];
-$relationship = $_POST["relationship"];
+$essn = $_POST["Essn"];
+$dependent_name = $_POST["Dependent_name"];
+$sex = $_POST["Sex"];
+$bdate = $_POST["Bdate"];
+$relationship = $_POST["Relationship"];
 $userid = $INTERFACE_USER_ID;
 
 $value = sprintf(

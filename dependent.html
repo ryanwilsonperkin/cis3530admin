@@ -32,6 +32,35 @@
     </nav>
 
     <div class="container">
+      <h1>Create Dependent</h1>
+      <form id="createDependentForm" name="createDependentForm" method="post" role="form">
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="alert alert-danger hidden" id="formErrors"></div>
+            <div class="form-group">
+              <label for="Essn">Employee SSN</label>
+              <input type="text" class="form-control" id="Essn" name="Essn" placeholder="XXXXXXXXX">
+            </div>
+            <div class="form-group">
+              <label for="Dependent_name">Dependent Name</label>
+              <input type="text" class="form-control" id="Dependent_name" name="Dependent_name" placeholder="Jane">
+            </div>
+            <div class="form-group">
+              <label for="Sex">Sex</label>
+              <input type="text" class="form-control" id="Sex" name="Sex" placeholder="F">
+            </div>
+            <div class="form-group">
+              <label for="Bdate">Birth Date</label>
+              <input type="text" class="form-control" id="Bdate" name="Bdate" placeholder="1969">
+            </div>
+            <div class="form-group">
+              <label for="Relationship">Relationship</label>
+              <input type="text" class="form-control" id="Relationship" name="Relationship" placeholder="Wife">
+            </div>
+            <button type="submit" class="btn btn-success" id="submit">Submit</button>
+          </div>
+        </div>
+      </form>
       <h1>View Dependents</h1>
       <table class="table table-striped" id="dependentTable">
         <thead>
@@ -54,6 +83,7 @@
     <script>
       $(document).ready(function() {
         populate_table('/api/get_dependents','#dependentTable');
+        bind_retrieval('/api/create_dependent','#createDependentForm');
       });
     </script>
   </body>

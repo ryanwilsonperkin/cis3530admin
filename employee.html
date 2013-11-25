@@ -53,7 +53,7 @@
             </div>
             <div class="form-group">
               <label for="SSN">SSN</label>
-              <input type="text" class="form-control" id="SSN" name="SSN" placeholder="XXX-XX-XXXX">
+              <input type="text" class="form-control" id="SSN" name="SSN" placeholder="XXXXXXXXX">
             </div>
             <div class="form-group">
               <label for="Address">Address</label>
@@ -75,7 +75,7 @@
             </div>
             <div class="form-group">
               <label for="Super_ssn">Supervisor SSN</label>
-              <input type="text" class="form-control" id="Super_ssn" name="Super_ssn" placeholder="YYY-YY-YYYY">
+              <input type="text" class="form-control" id="Super_ssn" name="Super_ssn" placeholder="YYYYYYYYY">
             </div>
             <div class="form-group">
               <label for="Dno">Department Number</label>
@@ -117,6 +117,7 @@
     <script>
       $(document).ready(function() {
         populate_table('/api/get_employees','#employeeTable');
+        bind_retrieval('/api/create_employee','#createEmployeeForm');
       });
     </script>
   </body>
