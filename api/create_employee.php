@@ -4,17 +4,17 @@ header('Content-type: application/json');
 mysql_connect() or die('Could not connect: ' . mysql_error());
 mysql_select_db('Company');
 
-$fname = $_POST["fname"];
-$minit = $_POST["minit"];
-$lname = $_POST["lname"];
-$ssn = $_POST["ssn"];
-$address = $_POST["address"];
-$sex = $_POST["sex"];
-$salary = $_POST["salary"];
-$super_ssn = $_POST["super_ssn"];
-$dno = $_POST["dno"];
-$bdate = $_POST["bdate"];
-$empdate = $_POST["empdate"];
+$fname = $_POST["Fname"];
+$minit = $_POST["Minit"];
+$lname = $_POST["Lname"];
+$ssn = $_POST["SSN"];
+$address = $_POST["Address"];
+$sex = $_POST["Sex"];
+$salary = $_POST["Salary"];
+$super_ssn = $_POST["Super_ssn"];
+$dno = $_POST["Dno"];
+$bdate = $_POST["BDate"];
+$empdate = $_POST["EmpDate"];
 $userid = $INTERFACE_USER_ID;
 
 $value = sprintf(

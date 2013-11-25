@@ -3,22 +3,28 @@ $INTERFACE_USER_ID = 'CIS3530';
 
 function update($fields, $table, $condition) {
   $result = mysql_query("UPDATE " . $table . " SET " . $fields . " WHERE " . $condition);
+  $response = Array();
   if (!$result) {
-    $response = "ERROR: " . mysql_error();
+    $response['status'] = "ERROR"; 
+    $response['message'] = mysql_error();
   }
   else {
-    $response = "OK";
+    $response['status'] = "OK";
+    $response['message'] = "OK";
   }
   return json_encode($response);
 }
 
 function insert_into($table, $value) {
   $result = mysql_query("INSERT INTO " . $table . " VALUE " . $value);
+  $response = Array();
   if (!$result) {
-    $response = "ERROR: " . mysql_error();
+    $response['status'] = "ERROR"; 
+    $response['message'] = mysql_error();
   }
   else {
-    $response = "OK";
+    $response['status'] = "OK";
+    $response['message'] = "OK";
   }
   return json_encode($response);
 }

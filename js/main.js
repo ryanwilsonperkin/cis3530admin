@@ -17,3 +17,23 @@ function populate_table(apiUrl, tableID) {
     }
   });
 };
+
+$('#createEmployeeForm').submit(function (event) {
+  event.preventDefault();
+  $.ajax({
+    url: "/api/create_employee.php",
+    type: "post",
+    dataType: 'json',
+    data: $('#createEmployeeForm').serialize(),
+    success: function(data) {
+      if (data['status'] == 'ERROR') {
+        $('#formErrors')
+          .removeClass('hidden')
+          .html('<p><strong>Error:</strong> ' + data['message'] + '</p>');
+      }
+      else {
+        location.reload();
+      }
+    }
+  });
+});
