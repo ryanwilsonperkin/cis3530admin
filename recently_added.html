@@ -33,7 +33,7 @@
 
     <div class="container">
       <h1>View Recently Added Employees</h1>
-      <table class="table table-striped" id="employeeTable">
+      <table class="table table-striped" id="newEmployeeTable">
         <thead>
           <tr>
             <th>First Name</th>
@@ -53,7 +53,7 @@
         </tbody>
       </table>
       <h1>View Recently Added Dependents</h1>
-      <table class="table table-striped" id="dependentTable">
+      <table class="table table-striped" id="newDependentTable">
         <thead>
           <tr>
             <th>Employee SSN</th>
@@ -67,7 +67,7 @@
         </tbody>
       </table>
       <h1>View Recently Added Works On</h1>
-      <table class="table table-striped" id="worksOnTable">
+      <table class="table table-striped" id="newWorksOnTable">
         <thead>
           <tr>
             <th>Employee SSN</th>
@@ -85,9 +85,9 @@
     <script src="js/main.js"></script>
     <script>
       $(document).ready(function() {
-        populate_table('/api/get_new_employees','#employeeTable');
-        populate_table('/api/get_new_dependents','#dependentTable');
-        populate_table('/api/get_new_works_on','#worksOnTable');
+        populate_table('/api/get_new_employees','#newEmployeeTable');
+        populate_table('/api/get_new_dependents','#newDependentTable');
+        populate_table('/api/get_new_works_on','#newWorksOnTable');
       });
     </script>
   </body>
