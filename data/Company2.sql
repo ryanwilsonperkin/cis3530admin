@@ -201,7 +201,7 @@ CREATE TABLE `Dependent` (
   `Relationship` varchar(15) NOT NULL,
   `userid` varchar(8) NOT NULL,
   PRIMARY KEY (`Essn`,`Dependent_name`),
-  UNIQUE KEY `Dependent_name` (`Dependent_name`,`Relationship`),
+  UNIQUE KEY `Dependent_name` (`Essn`,`Dependent_name`,`Relationship`),
   CONSTRAINT `fk_Dssn` FOREIGN KEY (`Essn`) REFERENCES `Employee` (`SSN`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
