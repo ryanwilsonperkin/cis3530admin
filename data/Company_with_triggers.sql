@@ -225,10 +225,10 @@ SET NEW.sex = 'F';
 ELSEIF (STRCMP(NEW.sex,"M") !=0) && (STRCMP(NEW.sex,"F") != 0) THEN 
 SET NEW.sex = NULL; 
 END IF;
-IF NEW.BDate < 1913-01-01 THEN 
+IF NEW.BDate < 1901 THEN 
 SET NEW.BDate = NULL; 
 END IF;
-IF NEW.BDate > CURDATE() THEN
+IF NEW.BDate > 2013 THEN
 SET NEW.BDate = NULL; 
 END IF;
 IF LENGTH(NEW.Relationship) = 1 THEN 
@@ -268,10 +268,10 @@ SET NEW.sex = 'F';
 ELSEIF (STRCMP(NEW.sex,"M") !=0) && (STRCMP(NEW.sex,"F") != 0) THEN 
 SET NEW.sex = NULL; 
 END IF;
-IF NEW.BDate < 1913-01-01 THEN 
+IF NEW.BDate < 1901 THEN 
 SET NEW.BDate = NULL; 
 END IF;
-IF NEW.BDate > CURDATE() THEN
+IF NEW.BDate > 2013 THEN
 SET NEW.BDate = NULL; 
 END IF;
 IF LENGTH(NEW.Relationship) = 1 THEN 
