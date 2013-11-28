@@ -16,9 +16,6 @@
 ###These statments will create a database for a company with various foreign key, unique key, and primary key constraints. 
 ###The Department table must be created first and then the Employee table could be created, followed by every other table.
 
-
-CREATE DATABASE companydb;
-
 ###This will create a table called Department, with a primary key of Dnumber, 
 ###a foreign key of mgr_ssn from Employee, and a unique key of Dname.
 CREATE TABLE Department (
