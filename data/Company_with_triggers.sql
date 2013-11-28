@@ -197,7 +197,7 @@ CREATE TABLE `Dependent` (
   `Essn` char(9) NOT NULL,
   `Dependent_name` varchar(10) NOT NULL,
   `Sex` char(1) NOT NULL,
-  `Bdate` date NOT NULL,
+  `Bdate` year(4) NOT NULL,
   `Relationship` varchar(15) NOT NULL,
   `userid` varchar(8) NOT NULL,
   PRIMARY KEY (`Essn`,`Dependent_name`),
