@@ -242,8 +242,11 @@ ELSEIF(STRCMP(NEW.Relationship,"son") = 0) THEN
 SET NEW.Relationship = 'Son';
 ELSEIF(STRCMP(NEW.Relationship,"daughter") = 0) THEN 
 SET NEW.Relationship = 'Daughter';
+ELSEIF(STRCMP(NEW.Relationship,"spouse") = 0) THEN 
+SET NEW.Relationship = 'Spouse';
 ELSEIF (STRCMP(NEW.Relationship,"Father") !=0) && (STRCMP(NEW.Relationship,"Mother") != 0)
-&& (STRCMP(NEW.Relationship,"Son") !=0) && (STRCMP(NEW.Relationship,"Daughter") != 0) THEN 
+&& (STRCMP(NEW.Relationship,"Son") !=0) && (STRCMP(NEW.Relationship,"Daughter") != 0) 
+&& (STRCMP(NEW.Relationship,"Spouse") != 0) THEN 
 SET NEW.Relationship = NULL; 
 END IF;
 END */;;
