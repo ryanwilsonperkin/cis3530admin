@@ -429,3 +429,8 @@ INSERT INTO `DeptLocation` VALUES (1,'Houston'),(2,'Redmond'),(4,'Stafford'),(5,
 /*!40000 ALTER TABLE `DeptLocation` ENABLE KEYS */;
 UNLOCK TABLES;
 
+LOCK TABLES `Project` WRITE;
+/*!40000 ALTER TABLE `Project` DISABLE KEYS */;
+INSERT INTO `Project` VALUES ('ProductX',1,'Bellaire',5,'Charlie',2000000,5000000),('ProductY',2,'Sugarland',5,'Charlie',1000546,3500300),('ProductZ',3,'Houston',5,'Charlie',2000345,500000),('Tesseract',4,'Redmond',2,'Ryan',2100300,3200100),('Computerization',10,'Stafford',4,'Charlie',4100200,5000000),('MancalaGame',15,'Sugarland',5,'avermeul',2001000,500000),('Reorganization',20,'Houston',1,'Charlie',3000200,500000),('VSecret',24,'Guelph',24,'Horia',1000000,2800100),('Newbenefits',30,'Stafford',4,'Charlie',500000,1500200),('Construction',44,'Sugarland',5,'Charlie',3000000,140000),('Innovation',117,'Guelph',11,'ikanji',1000000,1000000),('Fraud',118,'Toronto',11,'ikanji',2000000,3400100);
+/*!40000 ALTER TABLE `Project` ENABLE KEYS */;
+UNLOCK TABLES;
