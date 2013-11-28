@@ -231,7 +231,7 @@ END IF;
 IF NEW.BDate > CURDATE() THEN
 SET NEW.BDate = NULL; 
 END IF;
-IF LENGTH(NEW.Relationship) != 1 THEN 
+IF LENGTH(NEW.Relationship) = 1 THEN 
 SET NEW.Relationship = NULL; 
 END IF; 
 IF(STRCMP(NEW.Relationship,"father") = 0) THEN 
@@ -274,7 +274,7 @@ END IF;
 IF NEW.BDate > CURDATE() THEN
 SET NEW.BDate = NULL; 
 END IF;
-IF LENGTH(NEW.Relationship) != 1 THEN 
+IF LENGTH(NEW.Relationship) = 1 THEN 
 SET NEW.Relationship = NULL; 
 END IF; 
 IF(STRCMP(NEW.Relationship,"father") = 0) THEN 
