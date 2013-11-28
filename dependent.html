@@ -53,9 +53,25 @@
               <label for="Bdate">Birth Date</label>
               <input type="text" class="form-control" id="Bdate" name="Bdate" placeholder="1969">
             </div>
-            <div class="form-group">
-              <label for="Relationship">Relationship</label>
-              <input type="text" class="form-control" id="Relationship" name="Relationship" placeholder="Spouse">
+            <div class="radio-inline">
+              <input type="radio" name="Relationship" id="Spouse" value="Spouse">
+              Spouse
+            </div>
+            <div class="radio-inline">
+              <input type="radio" name="Relationship" id="Mother" value="Mother">
+              Mother
+            </div>
+            <div class="radio-inline">
+              <input type="radio" name="Relationship" id="Father" value="Father">
+              Father
+            </div>
+            <div class="radio-inline">
+              <input type="radio" name="Relationship" id="Daughter" value="Daughter">
+              Daughter
+            </div>
+            <div class="radio-inline">
+              <input type="radio" name="Relationship" id="Son" value="Son">
+              Son
             </div>
             <button type="submit" class="btn btn-success" id="submit">Submit</button>
           </div>
