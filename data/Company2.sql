@@ -417,3 +417,15 @@ INSERT INTO `Employee` VALUES ('Kira','A','Vorobej','012012333','Dundas, ON','F'
 /*!40000 ALTER TABLE `Employee` ENABLE KEYS */;
 UNLOCK TABLES;
 
+LOCK TABLES `Dependent` WRITE;
+/*!40000 ALTER TABLE `Dependent` DISABLE KEYS */;
+INSERT INTO `Dependent` VALUES ('123456789','Alice','F','2008-12-31','Daughter','Charlie'),('123456789','Elizabeth','F','1987-05-05','Spouse','Charlie'),('123456789','Michael','M','2008-01-01','Son','Charlie'),('231456456','Moneypenny','F','1968-05-13','Spouse','ikanji'),('268268702','Minnie','F','1978-08-11','Spouse','ikanji'),('268268702','Pluto','M','1988-07-31','Son','ikanji'),('321400789','Julia','F','1973-05-05','Spouse','Charlie'),('321456789','Angus','M','1995-01-08','Son','Charlie'),('321456789','Francine','F','1968-05-07','Spouse','Charlie'),('321456789','Tracey','F','1998-12-12','Daughter','Charlie'),('333445555','Alice','F','2006-04-05','Daughter','Charlie'),('333445555','Joy','F','1985-05-03','Spouse','Charlie'),('333445555','Theodore','M','2003-10-25','Son','Charlie'),('444555777','Emily','F','1978-05-26','Spouse','Ryan'),('453422453','Emma','F','2005-04-06','Daughter','Charlie'),('453422453','Thomas','M','2003-10-03','Son','Charlie'),('515821234','James','M','1992-04-14','Son','Ryan'),('550561234','Yuri','M','1993-12-25','Spouse','Ryan'),('666258951','Halle','F','1999-11-05','Daughter','ikanji'),('666258951','Maximus','M','2007-01-09','Son','ikanji'),('666258951','Megan','F','1987-01-21','Spouse','ikanji'),('987654001','Charlotte','F','1963-02-25','Spouse','Charlie'),('987654321','Abner','M','1992-02-29','Spouse','Charlie');
+/*!40000 ALTER TABLE `Dependent` ENABLE KEYS */;
+UNLOCK TABLES;
+
+LOCK TABLES `DeptLocation` WRITE;
+/*!40000 ALTER TABLE `DeptLocation` DISABLE KEYS */;
+INSERT INTO `DeptLocation` VALUES (1,'Houston'),(2,'Redmond'),(4,'Stafford'),(5,'Bellaire'),(5,'Houston'),(5,'Sugarland');
+/*!40000 ALTER TABLE `DeptLocation` ENABLE KEYS */;
+UNLOCK TABLES;
+
